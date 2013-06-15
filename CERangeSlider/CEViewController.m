@@ -22,22 +22,24 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSUInteger margin = 20;
+    NSUInteger margin = 30;
     CGRect sliderFrame = CGRectMake(margin, margin, self.view.frame.size.width - margin * 2, 30);
     _rangeSlider = [[CERangeSlider alloc] initWithFrame:sliderFrame];
 //    _rangeSlider.backgroundColor = [UIColor redColor];
+
     [_rangeSlider addTarget:self action:@selector(slideValueChanged:) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:_rangeSlider];
     
-    [self performSelector:@selector(updateState) withObject:nil afterDelay:1.0f];
-
+    for (int i = 0; i < 20; i++) {
+        [self performSelector:@selector(updateState) withObject:nil afterDelay:i * 1.0f];
+    }
 }
 
 - (void)updateState
 {
     _rangeSlider.trackHighlightColour = [UIColor purpleColor];
-    _rangeSlider.curvaceousness = -100.0;
+    _rangeSlider.curvaceousness -= 0.1;
 }
 
 
