@@ -23,7 +23,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSUInteger margin = 30;
-    CGRect sliderFrame = CGRectMake(margin, margin, self.view.frame.size.width - margin * 2, 30);
+    CGRect sliderFrame = CGRectMake(0, 0, self.view.frame.size.width - margin * 2, 30);
     _rangeSlider = [[CERangeSlider alloc] initWithFrame:sliderFrame];
 //    _rangeSlider.backgroundColor = [UIColor redColor];
 

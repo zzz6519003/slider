@@ -101,7 +101,7 @@ GENERATE_SETTER(upperValue, float, setUpperValue, setLayerFrames)
 
 - (void) setLayerFrames
 {
-    _trackLayer.frame = CGRectInset(self.bounds, 0, self.bounds.size.height / 3.5);
+    _trackLayer.frame = CGRectInset(self.bounds, 0, self.bounds.size.height / 2.5);
     [_trackLayer setNeedsDisplay];
     
     _knobWidth = self.bounds.size.height;
